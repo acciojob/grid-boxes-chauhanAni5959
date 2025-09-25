@@ -1,1 +1,63 @@
-/*  your css code here. If applicable */
+/* Make the body a grid container */
+#grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  gap: 10px;
+  margin: 0;
+  height: 100vh;
+  background: #f9f9f9;
+}
+
+/* Common box style */
+#grid > div {
+  background: green;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Layout positions */
+#grid > div:nth-child(1) {
+  grid-column: 1 / 4;
+}
+
+#grid > div:nth-child(2) {
+  grid-row: 2 / 6;
+  grid-column: 1 / 2;
+}
+
+#grid > div:nth-child(3) {
+  grid-column: 2 / 3;
+}
+
+#grid > div:nth-child(4) {
+  grid-column: 3 / 4;
+}
+
+#grid > div:nth-child(5) {
+  grid-column: 2 / 3;
+}
+
+#grid > div:nth-child(6) {
+  grid-column: 3 / 4;
+}
+
+#grid > div:nth-child(7) {
+  grid-column: 2 / 3;
+}
+
+#grid > div:nth-child(8) {
+  grid-column: 3 / 4;
+}
+
+#grid > div:nth-child(9) {
+  grid-column: 2 / 3;
+}
+
+#grid > div:nth-child(10) {
+  grid-column: 2 / 4;
+}
