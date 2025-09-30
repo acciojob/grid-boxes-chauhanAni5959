@@ -1,63 +1,40 @@
-/* Make the body a grid container */
-#grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
-  gap: 10px;
+body {
   margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "sidebar box3 box4 box4"
+    "sidebar box5 box5 box6"
+    "sidebar box7 box8 box9"
+    "sidebar box10 box10 box10";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 120px;
+  gap: 5px;
   height: 100vh;
-  background: #f9f9f9;
+  background: white;
 }
 
-/* Common box style */
-#grid > div {
-  background: green;
+.item {
+  background: seagreen;
   color: white;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 2rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 5px;
 }
 
-/* Layout positions */
-#grid > div:nth-child(1) {
-  grid-column: 1 / 4;
-}
-
-#grid > div:nth-child(2) {
-  grid-row: 2 / 6;
-  grid-column: 1 / 2;
-}
-
-#grid > div:nth-child(3) {
-  grid-column: 2 / 3;
-}
-
-#grid > div:nth-child(4) {
-  grid-column: 3 / 4;
-}
-
-#grid > div:nth-child(5) {
-  grid-column: 2 / 3;
-}
-
-#grid > div:nth-child(6) {
-  grid-column: 3 / 4;
-}
-
-#grid > div:nth-child(7) {
-  grid-column: 2 / 3;
-}
-
-#grid > div:nth-child(8) {
-  grid-column: 3 / 4;
-}
-
-#grid > div:nth-child(9) {
-  grid-column: 2 / 3;
-}
-
-#grid > div:nth-child(10) {
-  grid-column: 2 / 4;
-}
+.item1 { grid-area: header; }
+.item2 { grid-area: sidebar; }
+.item3 { grid-area: box3; }
+.item4 { grid-area: box4; }
+.item5 { grid-area: box5; }
+.item6 { grid-area: box6; }
+.item7 { grid-area: box7; }
+.item8 { grid-area: box8; }
+.item9 { grid-area: box9; }
+.item10 { grid-area: box10; }
